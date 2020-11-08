@@ -1,3 +1,4 @@
 Skriptata se koristi ./skripta.sh podatoci_koi_se_obrabotuvaat.osm file_kade_se_zacuvuva.txt
-Treba vo direktorium da imate podatoci od streetMap.osm i da imate kreiran file.txt kade ke 
-se zacucucaat podatocite
+Treba vo direktorium da imate podatoci od streetMap.osm i da imate kreiran file.txt kade ke se zacuvaat podatocite 
+Otkako ke ja izvrsite skriptata, iskoristete ja ovaa pipeline za da se otstranat diplikatite cat final.csv | uniq --skip-chars=2 --check-chars=3 > final1.csv
+kade sto final.csv e fajlot kade se smesteni podatocite zaedno so duplikatite, a final1.csv e fajlot kade se sortirani bez duplikati
