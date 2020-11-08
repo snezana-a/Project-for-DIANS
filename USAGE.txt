@@ -1,0 +1,3 @@
+Skriptata se koristi ./skripta.sh podatoci_koi_se_obrabotuvaat.osm file_kade_se_zacuvuva.txt
+Treba vo direktorium da imate podatoci od streetMap.osm i da imate kreiran file.txt kade ke 
+se zacucucaat podatocite
