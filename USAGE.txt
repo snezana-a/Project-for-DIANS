@@ -1,0 +1,7 @@
+Скриптата се користи со:
+./SCRIPT_FILTER.sh podatoci_za_obrabotka.osm file_za_finalni_podatoci.csv
+
+Треба во директориум да имате податоци од OpenStreetMap како 
+на пр. podatoci_mapa.osm кои ќе се обработуваат и да имате 
+креиран фајл како на пр. final_files.csv каде ќе се зачувуваат 
+податоците кој ќе бидат обработени со скриптата.
