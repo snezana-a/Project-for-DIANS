@@ -1,3 +1,3 @@
 Скриптата се користи ./skripta.sh podatoci_koi_se_obrabotuvaat.osm file_kade_se_zacuvuva.txt
 Треба во директориум да имате податоци од OpenStreetMap како fajl.osm кои ќе се обработуваат и да имате креиран фајл file.txt каде ќе се зачувуваат податоците.
-Откако ќе ја извршите скриптата, искористете ја оваа pipeline за да се отстранат дупликатите cat final.csv | uniq --skip-chars=2 --check-chars=3 > final1.csv каде што final.csv е фајлот каде се сместени податоците заедно со дупликати доколку има, a final1.csv е фајлот каде се филтрирани без дупликати.
+
