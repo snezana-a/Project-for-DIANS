@@ -1,3 +1,0 @@
-Скриптата се користи ./skripta.sh podatoci_koi_se_obrabotuvaat.osm file_kade_se_zacuvuva.txt
-Треба во директориум да имате податоци од OpenStreetMap како fajl.osm кои ќе се обработуваат и да имате креиран фајл file.txt каде ќе се зачувуваат податоците.
-
