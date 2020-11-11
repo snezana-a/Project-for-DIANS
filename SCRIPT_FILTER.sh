@@ -106,3 +106,6 @@ done
 
 #vo finalniot file sto go isprativme kako argument
 #gi imame site zapisi
+#so pomos na ovoj pipe gi briseme duplikatite i toa
+#povtorno go zacuvuvame vo fajlot propraten na vlez
+`cat $2 | uniq --skip-chars=2 --check-chars=3 > $2`
