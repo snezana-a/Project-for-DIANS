@@ -1,7 +1,9 @@
 #!/bin/bash
 
 #FILTER2: Filtriranje na site kafici koi se na max 1km odaleceni
-#presmetka za dali kaficot e na 1-1.5km do plostadot vo skopje
+#presmetka za dali kaficot e na 1-1.5km do plostadot vo skopje 
+#se vrakja koeficient spored koj se odreduva negovata oddalecenost
+#bidejkji se raboti so vrednostite na koordinatite
 function presmetka(){
 
 lat=419953933
