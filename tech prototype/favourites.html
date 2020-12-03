@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favourites</title>
+    <style>
+        .container{
+            width: 1000px;
+        }
+        .container .header{
+            height: 100px;
+            background-image: url("images/headerback.jpg");
+        }
+        .container .header .options{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            float: right;
+        }
+        .result img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .result span{
+            height: 40px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .result div{
+            display: inline;
+        }
+        .body .show-results{
+            width: 400px;
+        }
+        .body div{
+            float: left;
+        }
+
+        .search-options{
+            width: 300px;
+        }
+        .show-results ul li {
+            display: block;
+        }
+        .search-options div{
+            margin: 30px;
+        }
+        .search-options .search-fav{
+            width: 90px;
+            height: 80px;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <a href="my-profile.html"><img class="options" src="images/profile.png"></a>
+        <a href="my-profile.html"><img class="options" src="images/settings.png"></a>
+    </div>
+    <div class="body">
+        <div class="search-options">
+            <div class="search-by-name">
+                <input type="text" placeholder="Search coffe name">
+            </div>
+            <a href="home.html"><img class="search-fav" src="images/home.png"></a><br><br>
+            <a href="adjust.html"><img class="search-fav" src="images/adjust.png"></a><br>
+        </div>
+
+        <div class="show-results">
+            <h2>Favourites</h2>
+            <ul>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 1 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 2 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 3 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 4 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+                <li class="result">
+                    <div><img src="images/coffeeiimg.png"> <span class="name">Coffe Shop 5 </span><span class="rating">4.5*</span></div>
+                    <div><a href="add-favorites"><img src="images/heart-icon.png"></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
