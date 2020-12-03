@@ -52,7 +52,9 @@
             height: 80px;
             margin-left: 70px;
         }
-
+        #btn-pop-up{
+            cursor:pointer;
+        }
         #pop-up {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
@@ -68,26 +70,29 @@
         }
 
         /* Modal Content */
-        .content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
+
+        .content{
+            width: 30%;
+            font-family: Verdana;
+            font-weight: bold;
+            background-color: lightgray;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
         }
 
         /* The Close Button */
 
      #btn-confirm, #btn-cancel{
          text-align: center;
-         background-color: forestgreen;
+         background-color: dodgerblue;
          height:30px;
          width:100px;
 
      }
      #btn-confirm:hover, #btn-cancel:hover{
-         background-color: #328a52;
-         cursor: alias;
+         background-color: darkgray;
+         cursor: pointer;
      }
      #btn-confirm a, #btn-cancel a {
          text-underline: none;
@@ -123,6 +128,7 @@
                 <input type="text" placeholder="Search coffe name">
             </div>
             <a href="favourites.html"><img class="search-fav" src="images/fav.png"></a><br><br>
+            <a href="home.html"><img class="search-fav" src="images/home.png"></a><br><br>
             <img class='search-fav' id="btn-pop-up" src="images/adjust.png"></button><br>
         </div>
 
