@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create an account</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        button:hover{
+            opacity: 2;
+        }
+        .input-container {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .dole{
+            text-align: center;
+            width: 100%;
+            margin-top:20px;
+        }
+        a {
+            color:dodgerblue;
+        }
+
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .input-field:focus {
+            border: 2px solid dodgerblue;
+        }
+
+        /* Set a style for the submit button */
+        .btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            width: 30%;
+            opacity: 0.9;
+        }
+        .btn-div{
+            text-align: center;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+        input{
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            font-family: Verdana;
+        }
+        h4{
+            color:gray;
+            font-family: Calibri;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<form style="max-width:500px;margin:auto;">
+    <h2>Create an Account</h2>
+    <div class="input-container">
+        <img src="images/username.png">
+        <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    </div>
+
+    <div class="input-container">
+        <img src="images/email.jpg">
+        <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>
+
+    <div class="input-container">
+        <img src="images/password.png">
+        <input class="input-field" type="password" placeholder="Password" name="psw">
+    </div>
+
+    <div class="input-container">
+        <img src="images/confirmpass.png">
+        <input class="input-field" type="password" placeholder="Confirm Password" name="confpsw">
+    </div>
+    <div class="btn-div">
+        <a href="login.html">
+            <button class="btn">Sign up</button>
+        </a>
+    </div>
+
+
+<div class="dole">
+    <footer>
+        <h4>Have an account? <a href="login.html">Log in</a>. Or, <a href="home.html">continue</a> without an account.</h4>
+    </footer>
+</div>
+</form>
+
+</body>
+</html>
