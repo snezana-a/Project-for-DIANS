@@ -12,23 +12,23 @@ namespace MVC_APP.Models
     public class ApplicationUser : IdentityUser
     {
 
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Име")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Name")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Презиме")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Surname")]
         public string Surname { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Години")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Age")]
         public int Age { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Адреса на живеење")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Address")]
         public string Adress { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Држава")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "Country")]
         public string Country { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Град")]
+        [Required(ErrorMessage = "Required")]
+        [Display(Name = "City")]
         public string City { get; set; }
 
 

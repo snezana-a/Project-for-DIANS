@@ -11,7 +11,9 @@ namespace MVC_APP.Models
         [Key]
         [Required(ErrorMessage = "Required")]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Required")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Required")]
         public float Distance { get; set; }
         public string WebPage { get; set; }
         public string Url { get; set; }
