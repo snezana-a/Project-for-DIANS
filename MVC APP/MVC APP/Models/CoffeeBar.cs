@@ -16,7 +16,7 @@ namespace MVC_APP.Models
         [Required(ErrorMessage = "Required")]
         public float Distance { get; set; }
         public string WebPage { get; set; }
-        public string Url { get; set; }
+        public string ImageUrl { get; set; }
         public string Location { get; set; }
         public float Rating { get; set; }
     }
