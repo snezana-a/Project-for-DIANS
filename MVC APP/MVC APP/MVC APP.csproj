@@ -206,6 +206,18 @@
     <Compile Include="Migrations\202012131612479_views_and_coffeBarsListMethods.Designer.cs">
       <DependentUpon>202012131612479_views_and_coffeBarsListMethods.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012140009572_editmodelaccview.cs" />
+    <Compile Include="Migrations\202012140009572_editmodelaccview.Designer.cs">
+      <DependentUpon>202012140009572_editmodelaccview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012140020364_editmodels2.cs" />
+    <Compile Include="Migrations\202012140020364_editmodels2.Designer.cs">
+      <DependentUpon>202012140020364_editmodels2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012140126532_promena.cs" />
+    <Compile Include="Migrations\202012140126532_promena.Designer.cs">
+      <DependentUpon>202012140126532_promena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddToFavourites.cs" />
@@ -276,12 +288,9 @@
     <Content Include="Views\CoffeBar\Details.cshtml" />
     <Content Include="Views\CoffeBar\Edit.cshtml" />
     <Content Include="Views\CoffeBar\Index.cshtml" />
-    <Content Include="Views\Home\Alphabetical.cshtml" />
-    <Content Include="Views\Home\Distance.cshtml" />
-    <Content Include="Views\Home\Rating.cshtml" />
-    <Content Include="Views\Home\Favourites.cshtml" />
-    <Content Include="Views\Home\Search.cshtml" />
-    <Content Include="Views\Home\Adjust.cshtml" />
+    <Content Include="Views\Account\AlredyInFavourites.cshtml" />
+    <Content Include="Views\Account\AddToFavourites.cshtml" />
+    <Content Include="Views\Account\FavouriteBars.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +332,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012131612479_views_and_coffeBarsListMethods.resx">
       <DependentUpon>202012131612479_views_and_coffeBarsListMethods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012140009572_editmodelaccview.resx">
+      <DependentUpon>202012140009572_editmodelaccview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012140020364_editmodels2.resx">
+      <DependentUpon>202012140020364_editmodels2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012140126532_promena.resx">
+      <DependentUpon>202012140126532_promena.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -18,23 +18,10 @@ namespace MVC_APP.Models
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Surname")]
         public string Surname { get; set; }
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "Age")]
-        public int Age { get; set; }
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "Address")]
-        public string Adress { get; set; }
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "Country")]
-        public string Country { get; set; }
-        [Required(ErrorMessage = "Required")]
-        [Display(Name = "City")]
-        public string City { get; set; }
 
+        public int NumberOfFavouriteBars { get; set; }
 
-        public int NumberOfBars { get; set; }
-
-        public virtual List<CoffeeBar> favourteBars { get; set; }
+        public virtual List<CoffeeBar> FavouriteBars { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
