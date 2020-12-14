@@ -20,6 +20,32 @@ namespace MVC_APP.Controllers
             return View(db.Bars.ToList());
         }
 
+        /* READ FROM CSV FILE AND INPUT IN BASE
+         * SOME ATTR ARE ADDED LATER
+        public void readDb()
+        {
+            string csvData = System.IO.File.ReadAllText("C:\\Users\\Damchevski\\Desktop\\DizajnProekt\\Project-for-DIANS\\MVC APP\\MVC APP\\data\\readdata.txt");
+            foreach (string row in csvData.Split('\n'))
+            {
+                if (!string.IsNullOrEmpty(row))
+                {
+                    CoffeeBar for_add = new CoffeeBar();
+                    String disc = row.Split(',')[2].Split('.')[0];
+                      for_add.Distance = (float)Convert.ToDouble(disc);
+                      for_add.Name = row.Split(',')[1];
+                      for_add.ImageUrl = "nema";
+                      for_add.WebPage = "nema";
+                      for_add.Location = "nema";
+                      for_add.Rating = 0;
+
+                    db.Bars.Add(for_add);
+                    db.SaveChanges();
+                }
+            }
+
+        }
+        */
+
         // GET: CoffeBar/Details/5
         public ActionResult Details(int? id)
         {
