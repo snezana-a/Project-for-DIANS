@@ -1,0 +1,30 @@
+﻿@model MVC_APP.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "FavouriteBars";
+}
+
+<h2>User Favourites:</h2>
+
+<p>Da se napravi izgledot treba kako u mokapot voa dole e za test</p>
+
+<table>
+    <thead>
+        <tr>
+            <td style="font-size:18px">
+                Coffee Bar:
+            </td>
+            <td>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var g in Model.FavouriteBars)
+        {
+            <tr>
+                <td><a style="color:white;font-size:25px" href="~/CoffeBar/Details/@g.Id">@g.Name</a></td>
+                <td><button data-id="@g.Id" class="btn btn-danger">Remove from favourites</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

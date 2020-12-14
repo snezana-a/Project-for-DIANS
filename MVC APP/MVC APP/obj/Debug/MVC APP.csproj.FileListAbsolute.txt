@@ -457,3 +457,6 @@ C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\D
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.added_view_alphabetical.resources
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.otherViews.resources
 C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.views_and_coffeBarsListMethods.resources
+C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodelaccview.resources
+C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.editmodels2.resources
+C:\Users\Damchevski\Desktop\DizajnProekt\Project-for-DIANS\MVC APP\MVC APP\obj\Debug\MVC_APP.Migrations.promena.resources

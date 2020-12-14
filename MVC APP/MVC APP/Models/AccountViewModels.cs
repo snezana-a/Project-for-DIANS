@@ -64,39 +64,24 @@ namespace MVC_APP.Models
 
     public class RegisterViewModel
     {
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Име")]
+        [Required(ErrorMessage = "Required")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Презиме")]
+        [Required(ErrorMessage = "Required")]
         public string Surname { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Години")]
-        public int Age { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Адреса на живеење")]
-        public string Adress { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Држава")]
-        public string Country { get; set; }
-        [Required(ErrorMessage = "Полето е задолжително")]
-        [Display(Name = "Град")]
-        public string City { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required")]
         [EmailAddress]
-        [Display(Name = "Е-адреса")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "{0} мора да биде долго барем {2} карактери.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Лозинка")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Потврди лозинка")]
-        [Compare("Password", ErrorMessage = "Лозинките не се совпаѓаат.")]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 

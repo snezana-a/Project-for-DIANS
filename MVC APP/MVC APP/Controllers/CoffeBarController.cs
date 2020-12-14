@@ -46,7 +46,7 @@ namespace MVC_APP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Distance,WebPage,Url,Location,Rating")] CoffeeBar coffeeBar)
+        public ActionResult Create([Bind(Include = "Id,Name,Distance,WebPage,ImageUrl,Location,Rating")] CoffeeBar coffeeBar)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace MVC_APP.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Distance,WebPage,Url,Location,Rating")] CoffeeBar coffeeBar)
+        public ActionResult Edit([Bind(Include = "Id,Name,Distance,WebPage,ImageUrl,Location,Rating")] CoffeeBar coffeeBar)
         {
             if (ModelState.IsValid)
             {
@@ -103,6 +103,42 @@ namespace MVC_APP.Controllers
             }
             return View(coffeeBar);
         }
+
+        public class AlphabeticalComparer : IComparer<CoffeeBar>
+        {
+            public int Compare(CoffeeBar a, CoffeeBar b)
+            {
+                return String.Compare(a.Name, b.Name);
+            }
+        }
+
+        public class RatingComparer : IComparer<CoffeeBar>
+        {
+            public int Compare(CoffeeBar a, CoffeeBar b)
+            {
+                return a.Rating.CompareTo(b.Rating);
+            }
+        }
+        public ActionResult AlphabeticalSort()
+        {
+            List<CoffeeBar> all_bars = db.Bars.ToList();
+            AlphabeticalComparer comparer = new AlphabeticalComparer();
+
+            all_bars.Sort(comparer);
+
+            return View("Index", all_bars);
+        }
+
+        public ActionResult RatingSort()
+        {
+            List<CoffeeBar> all_bars = db.Bars.ToList();
+            RatingComparer comparer = new RatingComparer();
+
+            all_bars.Sort(comparer);
+
+            return View("Index",all_bars);
+        }
+
 
         // POST: CoffeBar/Delete/5
         [HttpPost, ActionName("Delete")]

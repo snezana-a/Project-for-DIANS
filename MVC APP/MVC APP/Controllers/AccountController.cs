@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -17,6 +18,8 @@ namespace MVC_APP.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext dbContext = ApplicationDbContext.Create();
+
 
         public AccountController()
         {
@@ -151,12 +154,21 @@ namespace MVC_APP.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Name = model.Name,
+                    Surname = model.Surname,
+                    FavouriteBars = new List<CoffeeBar>(),
+                    NumberOfFavouriteBars = 0
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    UserManager.AddToRole(user.Id, "User");
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
@@ -167,15 +179,12 @@ namespace MVC_APP.Controllers
                 }
                 AddErrors(result);
             }
-
-            // If we got this far, something failed, redisplay form
             return View(model);
         }
-
-        //
-        // GET: /Account/ConfirmEmail
-        [AllowAnonymous]
-        public async Task<ActionResult> ConfirmEmail(string userId, string code)
+            //
+            // GET: /Account/ConfirmEmail
+            [AllowAnonymous]
+            public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
             if (userId == null || code == null)
             {
@@ -423,6 +432,58 @@ namespace MVC_APP.Controllers
             base.Dispose(disposing);
         }
 
+
+        public ActionResult AddToFavourites(int id)
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            List<CoffeeBar> all_bars = dbContext.Bars.ToList();
+            CoffeeBar new_bar = new CoffeeBar();
+
+            foreach (CoffeeBar g in all_bars)
+            {
+                if (g.Id == id)
+                {
+                    new_bar = g;
+                    break;
+                }
+            }
+
+            List<CoffeeBar> bars_user = user.FavouriteBars.ToList();
+            foreach (CoffeeBar g in bars_user)
+            {
+                if (g.Id == id)
+                {
+                    return View("AlredyInFavourites");
+                }
+            }
+
+            AddToFavourites new_relation = new AddToFavourites();
+            new_relation.UserName = user.Name + " " + user.Surname;
+            new_relation.BarName = new_bar.Name;
+            new_relation.BarId = new_bar.Id;
+            new_relation.UserId = user.Id;
+
+            return View(new_relation);
+        }
+        [HttpPost]
+        public ActionResult AddToFavourites(AddToFavourites new_relation)
+        {
+            var user = dbContext.Users.Find(new_relation.UserId);
+            var bar = dbContext.Bars.Find(new_relation.BarId);
+
+            user.FavouriteBars.Add(bar);
+            user.NumberOfFavouriteBars = user.NumberOfFavouriteBars + 1;
+
+            dbContext.SaveChanges();
+
+            return RedirectToAction("FavouriteBars");
+        }
+
+        public ActionResult FavouriteBars()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            return View(user);
+        }
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

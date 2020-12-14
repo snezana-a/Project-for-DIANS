@@ -12,15 +12,10 @@ namespace MVC_APP.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
-
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Age { get; set; }
-        public string Adress { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public int NumberOfBars { get; set; }
-        public virtual List<CoffeeBar> favouriteBars { get; set; }
+        public int NumberOfFavouriteBars { get; set; }
+        public virtual List<CoffeeBar> FavouriteBars { get; set; }
     }
 
     public class ManageLoginsViewModel
